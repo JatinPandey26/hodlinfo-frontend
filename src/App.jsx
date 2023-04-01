@@ -29,9 +29,9 @@ function App() {
     queryKey: ['tickersFromWazir'],
     queryFn: async () => {
       let { data } = await axios.get(import.meta.env.VITE_WAZIRX_API)
-
-      data = data.slice(0, 10);
-      await axios.post(import.meta.env.VITE_BASE_URL, { data })
+      let arr = Object.values(data);
+      arr = arr.slice(0, 10);
+      await axios.post(import.meta.env.VITE_BASE_URL, { arr })
       return data
     },
   })

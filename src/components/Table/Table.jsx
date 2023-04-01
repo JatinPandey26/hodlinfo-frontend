@@ -2,19 +2,7 @@ import React, { useContext } from 'react'
 import './Table.scss'
 import { TickerContext } from '../../Context/TickerContext'
 const Table = () => {
-    const data = {
-        base_unit: "btc",
-        quote_unit: "inr",
-        low: "2402095.0",
-        high: "2489000.0",
-        last: "2410001.0",
-        volume: "9.56071",
-        sell: "2410001.0",
-        buy: "2407001.0",
-        at: 1680338008,
-        name: "BTC/INR"
-    }
-
+    
     const tickers = useContext(TickerContext)
     return (
         <div className="tableWrapper">
@@ -35,11 +23,11 @@ const Table = () => {
                             return (
                                 <tr key={index} className='backgroundGradient'>
                                     <td>{index + 1}</td>
-                                    <td>{data.symbol}</td>
-                                    <td>₹ {data.lastPrice}</td>
-                                    <td>₹ {data.bidPrice} / ₹{data.askPrice}</td>
+                                    <td>{data.name}</td>
+                                    <td>₹ {data.last}</td>
+                                    <td>₹ {data.buy} / ₹{data.sell}</td>
                                     <td>{data.volume}</td>
-                                    <td>{data.baseAsset}</td>
+                                    <td>{data.base_unit}</td>
                                 </tr>
                             )
                         })
