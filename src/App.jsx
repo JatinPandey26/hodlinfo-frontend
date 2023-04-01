@@ -29,7 +29,7 @@ function App() {
     queryKey: ['tickersFromWazir'],
     queryFn: async () => {
       let { data } = await axios.get(import.meta.env.VITE_WAZIRX_API)
- 
+
       data = data.slice(0, 10);
       await axios.post(import.meta.env.VITE_BASE_URL, { data })
       return data
@@ -39,7 +39,7 @@ function App() {
   const { isLoading: isDataLoading, error: dataError, data: tickers } = useQuery({
     queryKey: ['ticketsFromBackend'],
     queryFn: async () => {
-      const { data } = await axios.get('http://localhost:8080/tickers/')
+      const { data } = await axios.get(import.meta.env.VITE_BASE_URL)
       return data
     },
     enabled: !isLoading,
