@@ -1,0 +1,127 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    align-items: center;
+
+    @media screen and (max-width: 720px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        >.logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .logo {
+        cursor: default;
+
+        h1 {
+            font-weight: 300;
+            font-size: 1rem;
+
+            span {
+                color: #5dc7c2;
+                letter-spacing: 2px;
+                font-size: 2.5rem
+            }
+        }
+
+        p {
+            color: #6F7279;
+
+            span {
+                color: #5dc7c2;
+            }
+        }
+    }
+
+    .btnWrapper {
+        display: flex;
+        gap: 1rem;
+
+        .choiceBtn {
+            cursor: pointer;
+            height: fit-content;
+            padding: 0.3rem 0.5rem;
+
+            border-radius: 8px;
+
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+
+            h3 {
+                font-weight: 400;
+            }
+        }
+    }
+
+    .widgetContainer {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .timer {
+            cursor: default;
+            border: 2px solid #5dc7c2;
+            padding: 0.2rem;
+            border-radius: 50%;
+            height: 2.5rem;
+            width: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #5dc7c2;
+
+            >span {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1rem;
+                
+            }
+        }
+
+        .telegram {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: #5dc7c2;
+            padding: 0.2rem 1rem;
+            font-weight: 400;
+            border-radius: 5px;
+
+            &.light {
+                color: white;
+            }
+        }
+
+        .theme {
+            cursor: pointer;
+            width: 2.5rem;
+            height: 1.3rem;
+            border-radius: 10px;
+            display: flex;
+            transition: all 0.5s ease-in-out;
+            justify-content: flex-end;
+
+            .ball {
+                height: 100%;
+                width: 1.3rem;
+                background-color: #5dc7c2;
+                border-radius: 50%;
+
+            }
+
+            &.light {
+                justify-content: flex-start;
+            }
+        }
+    }
+}

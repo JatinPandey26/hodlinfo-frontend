@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    font-family: 'Oswald', sans-serif;
+    background-color: #191d28;
+    min-height: 100vh;
+    color: white;
+
+    .backgroundGradient {
+        background-color: #2E3241;
+    }
+
+    &.light {
+        background-color: white;
+        color: #191d28;
+
+        .backgroundGradient {
+            background-color: #f7f8fa;
+        }
+    }
+}
